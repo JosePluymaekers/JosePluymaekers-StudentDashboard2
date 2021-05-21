@@ -1,5 +1,4 @@
 import React from "react";
-import WincLogo from "../assets/logo_winc.jpg";
 
 export default () => (
   <main className="home">
