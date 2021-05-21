@@ -1,7 +1,7 @@
 import React from "react";
 import "./styles/app.css";
 import Home from "./components/Home";
-import Students from "./components/studentpage/Students";
+import AllData from "./components/AllData";
 import WincLogo from "./assets/logo_wincAcademy.jpg";
 import Container from "./Container";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
@@ -28,8 +28,8 @@ function App() {
               </Link>
             </li>
             <li>
-              <Link className="link" to="/students">
-                <p>Students</p>
+              <Link className="link" to="/AllData">
+                <p>Show all data</p>
               </Link>
             </li>
           </ul>
@@ -39,8 +39,8 @@ function App() {
           <Route path="/container">
             <Container />
           </Route>
-          <Route path="/students">
-            <Students />
+          <Route path="/AllData">
+            <AllData />
           </Route>
           <Route path="/">
             <Home />

@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import studentData from "./data";
 import Chart from "./components/Chart";
 import Dashboard from "./components/Dashboard";
-import Student from "./components/Student";
+import AllData from "./components/AllData";
 
 class Container extends React.Component {
   constructor() {
@@ -17,7 +17,6 @@ class Container extends React.Component {
       filteredBool: false,
     };
   }
-
   /**
    * removes duplicates from array
    * @param {array} array array with duplicate values
@@ -274,16 +273,8 @@ class Container extends React.Component {
               )}
             />
             <Route
-              path="/:id"
-              render={(props) => (
-                <Student
-                  {...props}
-                  studentInfo={this.getStudentInfo(props.match.params.id)}
-                  data={this.getGradesFromStudent(props.match.params.id)}
-                  radioState={this.state.radioState}
-                  handleFilterChange={this.handleFilterChange}
-                />
-              )}
+              path="/AllData"
+              render={(props) => <AllData graphData={this.state.graphData} />}
             />
           </Switch>
         </main>
